@@ -3,6 +3,8 @@ from decimal import Decimal
 import pandas as pd
 import math
 from scipy import stats
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def clean_assist(df, n_rows, n_round):
         """
@@ -74,3 +76,48 @@ def clean_assist(df, n_rows, n_round):
         result=result.rename(columns = {'index':'VARIABLES'})
         print("Data Loaded ok")
         return (result)
+
+
+
+def view_normality(df, list1, print_img, size_x, size_y, font_size):
+        fig, ax = plt.subplots(figsize = (size_x, size_y))
+        inn = 0
+        for col in list1:
+            if df[col].dtype.name != 'object':
+                inn+=1
+        inn = inn * 2 + 2
+        i = 0
+        for col in list1:
+            i+=1
+            if df[col].dtype.name == 'object':
+                i-=1
+            else:
+                try:
+                    col_test = df[col]
+                    mu = (col_test).mean()
+                    sigma = statistics.stdev(col_test)
+                    sizex = int(col_test.shape[0])
+                    norm_rand = np.random.normal(mu, sigma, sizex)
+                    norm_test = col_test.tolist()
+                    st2, pval_2 = stats.ks_2samp(norm_rand, norm_test)
+                    stn, pval_n = stats.normaltest(norm_test)
+
+                    p = max([pval_n, pval_2])
+                    p = Decimal(p)
+                    if abs(p.as_tuple().exponent) > 4:
+                        p = float('{0:1.0e}'.format(p))
+                    else:
+                        p = float(p.round(4))
+                    plt.subplot(inn, 2, i)
+                    plt.xlabel(col, fontsize=font_size*0.75)
+                    plt.ylabel('Frequency Count', fontsize=font_size*0.75)
+                    plt.title("HIST: " + col + ", pvalue = " + str(p), fontsize=font_size)
+                    sns.kdeplot(norm_test, label = col, shade = True)
+                    sns.kdeplot(norm_rand, label = "Random Normal", color = "g")
+                    plt.legend(fontsize=font_size*0.65)
+                except:
+                    print("Conflict in variable: " + str(col) + "\n" + "processing")
+        plt.tight_layout()
+        if print_img == "y":
+            plt.savefig('Histrograms_all.png')
+        plt.show()
