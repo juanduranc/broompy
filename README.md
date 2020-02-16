@@ -1,7 +1,11 @@
 # Clean Assist
 
-Clean Assist is a simple library to help data scientists observe a summary of any DataFrame they would like to clean.<br>
-This library also displays charts to view the normal approximation of your variables.
+Clean Assist is a simple library designed to help data scientists observe a summary of any DataFrame they would like to clean.<br>
+This library also displays charts to view the normal approximation of your variables.<br>
+
+This library is composed of 2 functions:
++ clean_assist(df, n_rows, n_round)<br>
++ view_normality(df, list1, print_img, size_x, size_y, font_size)<br>
 
 ### To import the library: copy paste the green colored code to your python code:
 ```diff
@@ -12,10 +16,6 @@ This library also displays charts to view the normal approximation of your varia
 + url = 'https://raw.githubusercontent.com/juanduranc/categorical_distribution_juan/master/info'
 + exec(requests.get(url).text)
 ```
-This library is composed of 2 functions:<br>
-+ clean_assist(df, n_rows, n_round)<br>
-+ view_normality(df, list1, print_img, size_x, size_y, font_size)<br>
-
 
 <!DOCTYPE html>
 <html>
