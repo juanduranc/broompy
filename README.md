@@ -120,10 +120,13 @@ Examples of findings:<br>
   <li>TOTAL_PHOTOS_VIEWED has a median of 0 and 120 upper outliers. This means most people dont look view photos.</li>
   <li>CROSS_SELL_SUCCESS has 2 unique values. From the column named sample you can see only ones and zeros. This is a binary or boolean column.</li>
 </ul>
-<br><br><br><br>
+<br>
 2. The following image is an output form the function: view_normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
-
 <img src="https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/normality.png" />
-
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
 </body>
 </html>
