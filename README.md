@@ -31,32 +31,56 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>HighwayMPG</td>
     </tr>
     <tr>
-      <td>Audi RS 6</td>
-      <td>4.2</td>
-      <td>8</td>
-      <td>450</td>
-      <td>22</td>
+      <th>0</th>
+      <td>AVG_CLICKS_PER_VISIT</td>
+      <td>0</td>
+      <td>1946</td>
+      <td>int64</td>
+      <td>13.508222</td>
+      <td>13.0</td>
+      <td>15</td>
+      <td>[11, 13, 12, 13, 13, 17, 10, 13, 12, 12]</td>
+      <td>[6,0]</td>
+      <td>0.03</td>
     </tr>
     <tr>
-      <td>Audi TT 3.2</td>
-      <td>3.2</td>
-      <td>6</td>
-      <td>250</td>
-      <td>29</td>
+      <th>1</th>
+      <td>MEDIAN_MEAL_RATING</td>
+      <td>0</td>
+      <td>1946</td>
+      <td>int64</td>
+      <td>2.794964</td>
+      <td>3.0</td>
+      <td>5</td>
+      <td>[3, 3, 3, 3, 3, 2, 4, 3, 3, 3]</td>
+      <td>[0,13]</td>
+      <td>3e-06</td>
     </tr>
     <tr>
-      <td>BMW 325xi</td>
-      <td>2.5</td>
-      <td>6</td>
-      <td>184</td>
-      <td>27</td>
+      <th>2</th>
+      <td>LARGEST_ORDER_SIZE</td>
+      <td>0</td>
+      <td>1946</td>
+      <td>int64</td>
+      <td>4.436793</td>
+      <td>4.0</td>
+      <td>12</td>
+      <td>[6, 4, 3, 3, 3, 3, 6, 5, 4, 7]</td>
+      <td>[0,33]</td>
+      <td>3e-25</td>
     </tr>
     <tr>
-      <td>BMW 330i</td>
-      <td>3</td>
-      <td>6</td>
-      <td>225</td>
-      <td>30</td>
+      <th>3</th>
+      <td>TOTAL_PHOTOS_VIEWED</td>
+      <td>0</td>
+      <td>1946</td>
+      <td>int64</td>
+      <td>106.433710</td>
+      <td>0.0</td>
+      <td>371</td>
+      <td>[0, 90, 0, 0, 253, 0, 705, 0, 0, 0]</td>
+      <td>[0,120]</td>
+      <td>5e-90</td>
     </tr>
 </table>
 
