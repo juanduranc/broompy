@@ -1,6 +1,6 @@
 # Clean Assist
 
-Clean Assist is a simple library designed to help data scientists observe a summary of any DataFrame they would like to clean.<br>
+Clean Assist is a simple library designed to help data scientists observe a summary of any DataFrame they would like to clean.
 This library also displays charts to view the normal approximation of your variables.<br>
 
 This library is composed of 2 functions:
