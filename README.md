@@ -8,9 +8,10 @@ This is a simple library to help data scientists observe how to clean their data
 <html>
 <head>
 	<meta charset="utf-8"/>
+	.red {color:red;}
 </head>
 <body>
-<h1 class="text-purple">Template</h1>
+<h1 style="color:red">Template</h1>
 
 </body>
 </html>
