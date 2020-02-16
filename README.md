@@ -4,11 +4,11 @@ Clean Assist is a simple library designed to help data scientists observe a summ
 This library also displays charts to view the normal approximation of your variables.<br>
 
 **Clean Assist is composed of 2 functions:**
+---------
 1. **clean_assist(df, n_rows, n_round)**<br><br>
     Displays relevant features to help you on data cleaning and analysis.<br>
     
-    ***Parameters***
-    ---------
+    ***Parameters***<br>
     df  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : DataFrame you would like to analyze<br>
     n_rows &nbsp;&nbsp; : Number of variables to display<br>
     n_round &nbsp; :  Number of decimals to round calculations<br><br>
