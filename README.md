@@ -8,10 +8,10 @@ This is a simple library to help data scientists observe how to clean their data
 <html>
 <head>
 	<meta charset="utf-8"/>
-	.red {color:red;}
 </head>
 <body>
 <h1 style="color:red">Template</h1>
+	![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
 
 </body>
 </html>
