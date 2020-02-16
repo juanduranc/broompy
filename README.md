@@ -8,7 +8,7 @@ This is a simple library to help data scientists observe how to clean their data
 <html>
   <body>
     <div>
-      <h1 style="color:green">Python Classification Modeling</h1><br><br>
+      <h1 style="color:$bg-green">Python Classification Modeling</h1><br><br>
       url = 'https://raw.githubusercontent.com/juanduranc/categorical_distribution_juan/master/info'<br>
       exec(requests.get(url).text)<br>
     </div>
