@@ -83,6 +83,16 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>[0,120]</td>
       <td>5e-90</td>
     </tr>
+      <td>CROSS_SELL_SUCCESS</td>
+      <td>0</td>
+      <td>1946</td>
+      <td>int64</td>
+      <td>0.678828</td>
+      <td>1.0</td>
+      <td>2</td>
+      <td>[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]</td>
+      <td></td>
+      <td>1e-159</td>
 </table>
 
 </body>
