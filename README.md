@@ -13,6 +13,15 @@ This library also displays charts to view the normal approximation of your varia
     n_rows &nbsp;&nbsp; : Number of variables to display<br>
     n_round &nbsp; :  Number of decimals to round calculations<br>
 2. view_normality(df, list_var, print_img, size_x, size_y, font_size)<br>
+    Displays histograms to compare the your variables to a normal distribution.<br>
+    
+    PARAMETERS<br>
+    ----------<br>
+    df  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : DataFrame you would like to analyze<br>
+    print_img &nbsp;&nbsp; : Number of variables to display<br>
+    size_x &nbsp;&nbsp;&nbsp; :  width of the image output<br>
+    size_y &nbsp;&nbsp;&nbsp; :  height of the image output<br>
+    font_size &nbsp;&nbsp; :  font size of the titles and headers<br>
 
 ### To import the library: copy paste the green colored code to your python code:
 ```diff
