@@ -49,8 +49,8 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
     </tr>
     <tr>
       <td>MEDIAN_MEAL_RATING</td>
-      <td>0</td>
-      <td>1946</td>
+      <td>47</td>
+      <td>1899</td>
       <td>int64</td>
       <td>2.8</td>
       <td>3.0</td>
