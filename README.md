@@ -18,7 +18,8 @@ Clean Assist is a simple library to help data scientists observe a summary of an
 <html>
 <body>
 
-<h2>Output sample and interpretation</h2>
+<h2>Sample</h2><br>
+The following table is a sample of clean_assist(df, n_rows, n_round) output<br>
 
 <table style="width:100%">
 <tr>
