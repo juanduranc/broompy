@@ -123,6 +123,8 @@ Examples of findings:<br>
 <br>
 2. The following image is a sample output from the function: view_normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
 <img src="https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/normality.png" />
+<br>
+Histograms' interpretation:<br>
 <ul>
   <li>MEDIAN_MEAL_RATING has interger values and it mimisc a normal distribution</li>
   <li>AVG_CLICKS_PER_VISIT is the colsest variable to a normal distribution</li>
@@ -131,3 +133,5 @@ Examples of findings:<br>
 </ul>
 </body>
 </html>
+
+
