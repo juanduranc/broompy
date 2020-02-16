@@ -31,7 +31,7 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <th>MEAN</th>
       <th>MEDIAN</th>
       <th>UNIQUES</th>
-      <th>SAMPLE</th>
+      <th style="min-width: 200px">SAMPLE</th>
       <th>Outliers</th>
       <th>pval(Norm)</th>
     </tr>
