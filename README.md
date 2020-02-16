@@ -19,8 +19,8 @@ This library also displays charts to view the normal approximation of your varia
     ----------<br>
     df  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : DataFrame you would like to analyze<br>
     print_img &nbsp;&nbsp; : Number of variables to display<br>
-    size_x &nbsp;&nbsp;&nbsp; :  width of the image output<br>
-    size_y &nbsp;&nbsp;&nbsp; :  height of the image output<br>
+    size_x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  width of the image output<br>
+    size_y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  height of the image output<br>
     font_size &nbsp;&nbsp; :  font size of the titles and headers<br>
 
 ### To import the library: copy paste the green colored code to your python code:
