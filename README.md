@@ -5,7 +5,7 @@ This is a simple library to help data scientists observe a summary of any DataFr
 
 ### Copy paste the green colored code to your python code:
 ```diff
-- Note: Ignore the plus signs
+- Note: Ignore the plus(+) signs
 ```
 ```diff
 + import requests
