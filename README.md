@@ -13,3 +13,50 @@ Clean Assist is a simple library to help data scientists observe a summary of an
 ```
 
 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Output sample and interpretation</h2>
+
+<table style="width:100%">
+<tr>
+      <td>Model</td>
+      <td>Engine</td>
+      <td>Cylinders</td>
+      <td>Horsepower</td>
+      <td>HighwayMPG</td>
+    </tr>
+    <tr>
+      <td>Audi RS 6</td>
+      <td>4.2</td>
+      <td>8</td>
+      <td>450</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>Audi TT 3.2</td>
+      <td>3.2</td>
+      <td>6</td>
+      <td>250</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>BMW 325xi</td>
+      <td>2.5</td>
+      <td>6</td>
+      <td>184</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td>BMW 330i</td>
+      <td>3</td>
+      <td>6</td>
+      <td>225</td>
+      <td>30</td>
+    </tr>
+</table>
+
+</body>
+</html>
