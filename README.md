@@ -1,6 +1,7 @@
-[![](./svgs/sed.svg)](https://github.com/trending?l=sed)
-
-+ text in green
+```diff
++ this text is highlighted in green
+- this text is highlighted in red
+```
 
 # Clean Assist
 
