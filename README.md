@@ -5,14 +5,14 @@ This library also displays charts to view the normal approximation of your varia
 
 **Clean Assist is composed of 2 functions:**
 ---------
-1. **clean_assist(df, n_rows, n_round)**<br><br>
+1. **clean_assist.table(df, n_rows, n_round)**<br><br>
     Displays relevant features to help you on data cleaning and analysis.<br>
     
     ***Parameters***<br>
     df  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : DataFrame you would like to analyze<br>
     n_rows &nbsp;&nbsp; : Number of variables to display<br>
     n_round &nbsp; :  Number of decimals to round calculations<br><br>
-2. ***view_normality(df, list_var, print_img, size_x, size_y, font_size)***<br><br>
+2. ***clean_assist.normality(df, list_var, print_img, size_x, size_y, font_size)***<br><br>
     Displays histograms to compare the your variables to a normal distribution.<br>
     
     ***Parameters***<br>
@@ -39,7 +39,7 @@ This library also displays charts to view the normal approximation of your varia
 <body>
 
 <h3>Example of library usage and interpretation:</h3>
-1. The following table is a sample of an output form the function: clean_assist(df, n_rows, n_round)<br><br>
+1. The following table is a sample of an output form the function: clean_assist.table(df, n_rows, n_round)<br><br>
 
 <table>
      <tr>
@@ -122,7 +122,7 @@ Examples of findings:<br>
   <li>CROSS_SELL_SUCCESS has 2 unique values. From the column named sample you can see only ones and zeros. This is a binary or boolean column.</li>
 </ul>
 <br>
-2. The following image is a sample output from the function: view_normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
+2. The following image is a sample output from the function: clean_assist.normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
 <img src="https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/normality.png" />
 <br>
 Histograms' interpretation:<br>
