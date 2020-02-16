@@ -9,7 +9,7 @@ This library also displays charts to view the normal approximation of your varia
     
     PARAMETERS<br>
     ----------<br>
-    df  &nbsp&nbsp    : DataFrame you would like to analyze<br>
+    df  &nbsp;&nbsp;   : DataFrame you would like to analyze<br>
     n_rows  : Number of variables to display<br>
     n_round : Number of decimals to round calculations<br>
 2. view_normality(df, list_var, print_img, size_x, size_y, font_size)<br>
