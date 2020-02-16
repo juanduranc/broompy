@@ -1,5 +1,8 @@
 # Clean Assist
 
+```diff
++ this text is highlighted in green
+```
 This is a simple library to help data scientists observe how to clean their data.
 
 ### Copy paste the following lines of code:
@@ -11,9 +14,7 @@ This is a simple library to help data scientists observe how to clean their data
 </head>
 <body>
 <h1 style="color:red">Template</h1>
-```diff
-+ this text is highlighted in green
-```
+
 	
 
 </body>
