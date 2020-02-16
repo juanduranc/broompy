@@ -19,8 +19,8 @@ This library also displays charts to view the normal approximation of your varia
 <html>
 <body>
 
-<h2>Sample</h2><br>
-The following table is a sample of clean_assist(df, n_rows, n_round) output:<br><br>
+<h3>Sample</h3><br>
+The following table is a sample of an output clean_assist(df, n_rows, n_round) output:<br><br>
 
 <table>
      <tr>
@@ -31,7 +31,7 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <th>MEAN</th>
       <th>MEDIAN</th>
       <th>UNIQUES</th>
-      <th>SAMPLExxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</th>
+      <th>SAMPLE__________________________</th>
       <th>Outliers</th>
       <th>pval(Norm)</th>
     </tr>
