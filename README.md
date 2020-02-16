@@ -38,7 +38,7 @@ This library also displays charts to view the normal approximation of your varia
 <body>
 
 <h3>Example of library usage and interpretation:</h3>
-The following table is a sample of an output clean_assist(df, n_rows, n_round) output:<br><br>
+The following table is a sample of an output form the function: clean_assist(df, n_rows, n_round)<br><br>
 
 <table>
      <tr>
@@ -111,7 +111,13 @@ The following table is a sample of an output clean_assist(df, n_rows, n_round) o
       <td>[1, 1, 1, 0, 1, 1, 0, 1, 1, 1]</td>
       <td></td>
       <td>1e-159</td>
-</table>
+</table><br><br><br>
+Examples of Findings:
+-
++ a
++ b
+<br><br><br><br>
+The following image is an output form the function: view_normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
 
 <img src="https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/normality.png" />
 
