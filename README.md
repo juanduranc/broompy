@@ -3,7 +3,7 @@
 Clean Assist is a simple library to help data scientists observe a summary of any DataFrame they would like to clean.<br>
 This library also displays charts to view the normal approximation of your variables.
 
-### To import library: copy paste the green colored code to your python code:
+### To import the library: copy paste the green colored code to your python code:
 ```diff
 - Note: Ignore the plus(+) signs
 ```
