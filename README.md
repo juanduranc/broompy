@@ -111,7 +111,7 @@ This library also displays charts to view the normal approximation of your varia
       <td>[1, 1, 1, 0, 1, 1, 0, 1, 1, 1]</td>
       <td></td>
       <td>1e-159</td>
-</table><br><br><br>
+</table><br>
 Examples of findings:<br>
 <ul>
   <li>AVG_CLICKS_PER_VISIT has a similar mean and mean, it aproximates a normal distribution and has 6 lower outliers.</li>
