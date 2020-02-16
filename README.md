@@ -18,7 +18,8 @@ This library also displays charts to view the normal approximation of your varia
     PARAMETERS
     ----------
     df  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : DataFrame you would like to analyze<br>
-    print_img &nbsp;&nbsp; : Number of variables to display<br>
+    list_var &nbsp;&nbsp; : Name of columns to analyze in a list format<br>
+    print_img &nbsp;&nbsp; : input 'y' to print image or 'n' to not print<br>
     size_x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  width of the image output<br>
     size_y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  height of the image output<br>
     font_size &nbsp;&nbsp; :  font size of the titles and headers<br>
@@ -121,7 +122,7 @@ Examples of findings:<br>
   <li>CROSS_SELL_SUCCESS has 2 unique values. From the column named sample you can see only ones and zeros. This is a binary or boolean column.</li>
 </ul>
 <br>
-2. The following image is an output form the function: view_normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
+2. The following image is a sample output from the function: view_normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
 <img src="https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/normality.png" />
 <ul>
   <li>Coffee</li>
