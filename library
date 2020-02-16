@@ -72,4 +72,5 @@ def clean_assist(df, n_rows, n_round):
             i1+=1
         result.reset_index(inplace=True)
         result=result.rename(columns = {'index':'VARIABLES'})
+        print("Data Loaded ok")
         return (result)
