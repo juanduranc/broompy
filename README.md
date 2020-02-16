@@ -3,9 +3,9 @@
 
 This is a simple library to help data scientists observe a summary of any DataFrame they would like to clean.
 
-### Copy paste the following lines of code:
+### Copy paste the green colored code to your python code:
 ```diff
-Ignore the + signs
+- Note: Ignore the plus signs
 ```
 ```diff
 + import requests
