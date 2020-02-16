@@ -4,8 +4,8 @@ Clean Assist is a simple library designed to help data scientists observe a summ
 This library also displays charts to view the normal approximation of your variables.<br>
 
 **Clean Assist is composed of 2 functions:**
-+ clean_assist(df, n_rows, n_round)<br>
-+ view_normality(df, list1, print_img, size_x, size_y, font_size)<br>
+1. clean_assist(df, n_rows, n_round)<br>
+2. view_normality(df, list1, print_img, size_x, size_y, font_size)<br>
 
 ### To import the library: copy paste the green colored code to your python code:
 ```diff
