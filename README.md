@@ -15,8 +15,7 @@ This library also displays charts to view the normal approximation of your varia
 2. ***view_normality(df, list_var, print_img, size_x, size_y, font_size)***<br><br>
     Displays histograms to compare the your variables to a normal distribution.<br>
     
-    PARAMETERS
-    ----------
+    ***Parameters***<br>
     df  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : DataFrame you would like to analyze<br>
     list_var &nbsp;&nbsp; : Name of columns to analyze in a list format<br>
     print_img &nbsp;&nbsp; : input 'y' to print image or 'n' to not print<br>
