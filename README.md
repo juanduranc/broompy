@@ -60,16 +60,16 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>3e-06</td>
     </tr>
     <tr>
-      <td>LARGEST_ORDER_SIZE</td>
+      <td>REVENUE</td>
       <td>0</td>
       <td>1946</td>
-      <td>int64</td>
-      <td>4.4</td>
-      <td>4.0</td>
-      <td>12</td>
-      <td>[6, 4, 3, 3, 3, 3, 6, 5, 4, 7]</td>
-      <td>[0,33]</td>
-      <td>3e-25</td>
+      <td>float64</td>
+      <td>2107.3</td>
+      <td>1740.0</td>
+      <td>859</td>
+      <td>[1880.0, 1495.0, 2572.5, 1647.0, 1923.0, 1250.0, 4665.0, 1690.0, 1710.0, 1770.0]</td>
+      <td>[0,82]</td>
+      <td>1e-21</td>
     </tr>
     <tr>
       <td>TOTAL_PHOTOS_VIEWED</td>
