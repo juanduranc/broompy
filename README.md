@@ -31,7 +31,7 @@ The following table is a sample of an output clean_assist(df, n_rows, n_round) o
       <th>MEAN</th>
       <th>MEDIAN</th>
       <th>UNIQUES</th>
-      <th>SAMPLE__________________________________</th>
+      <th>SAMPLE_______________________________</th>
       <th>Outliers</th>
       <th>pval(Norm)</th>
     </tr>
@@ -67,7 +67,7 @@ The following table is a sample of an output clean_assist(df, n_rows, n_round) o
       <td>2107.3</td>
       <td>1740.0</td>
       <td>859</td>
-      <td>[1880, 1495, 2572.5, 1647, 1923, 1250, 4665]</td>
+      <td>[1880, 1495, 2572.5, 1647, 1923, 1250]</td>
       <td>[0,82]</td>
       <td>1e-21</td>
     </tr>
