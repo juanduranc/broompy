@@ -1,69 +1,275 @@
-def clean_assist(df, n_rows, n_round):
-    """
-Displays relevant features to help you on data cleaning and analysis.
+import numpy as np
+import pandas as pd
+import math
+from scipy import stats
+from statistics import stdev
+import matplotlib.pyplot as plt
+import warnings
+# warnings.filterwarnings("ignore")
+def juan_categories_describe1(raw_copy, category, interest, roundn, request, visible_rows):
+    """aaa"""
+    dictionary_allOutliers = {}
+    dictionary_upper_outliers = {}
+    dictionary_lower_outliers = {}
 
-PARAMETERS
-----------
-df      : DataFrame you would like to analyze
-n_rows  : Number of variables to display
-n_round : Number of decimals to round calculations
-"""
-    n_rows +=1
-    pd.set_option('display.max_rows', n_rows)
-    nulls = df.isnull().sum()
-    counts = df.count()
-    means = round(df.mean(), n_round)
-    types = df.dtypes
-    median = round(df.median(), n_round)
-    result = pd.concat([nulls, counts, types, means, median], axis = 1, sort=False)
-    result.rename(columns={0: 'NULLS', 1: 'COUNT', 2: 'TYPES', 3:'MEAN', 4:'MEDIAN'}, inplace=True)
-    result['UNIQUES'] = ''
-    result['SAMPLE'] = ''
-    result['Outliers'] = ''
-    result['pval(Norm)'] = ''
-    i1 = 0
-    norma = {}
-    for i in df.columns:
-        list1 = df[i][0:10].to_list()
-        result['SAMPLE'].values[i1] = str(list1)
-        va = int(df[i].value_counts().shape[0])
-        result['UNIQUES'].values[i1] = va
+    data_table = raw_copy
+    data_table = data_table.dropna(axis=1, how='all')
+    average_byCategory = round(data_table.groupby(category).mean(),2)
+    descriptive_table = pd.DataFrame(data = None, columns = [interest, 'is_Outlier', 'Rank_inList', 'Outliers [Lower,Upper]', 'null vs available', 'IQR_Limit(1.5)', 'Mean: ' + interest, 'mean', 'median', 'aprox_normal'])
+    descriptive_table2 = pd.DataFrame(data = None, columns = ['Characteristics', 'Outliers [Lower,Upper]', 'null vs available', 'IQR_Limit(1.5)', 'mean', 'median', 'aprox_normal'])
 
-        if df[i].dtype.name != 'object':
-            col_data = df[i].dropna()
+    pd.set_option('display.max_rows', visible_rows)
+    if interest == 'all':
+        raw_copy['ALL_data'] = 'all'
+        category = 'ALL_data'
+
+    for col in average_byCategory.columns:
+        if average_byCategory[col].dtype.name != 'object':
+            col_data = average_byCategory[col].dropna()
+            col_mean = col_data.mean()
             IQR_25 = np.percentile(col_data, 25)
             IQR_75 = np.percentile(col_data, 75)
-            IQR_1p5 = round(1.5*(IQR_75-IQR_25), n_round)
-            lowerLimit = round(IQR_25 - IQR_1p5, n_round)
-            upperLimit = round(IQR_75 + IQR_1p5, n_round)
-
-            lower_qty = int(df[i][df[i] < lowerLimit].shape[0])
-            high_qty = int(df[i][df[i] > upperLimit].shape[0])
-            if (lower_qty > 0 or high_qty > 0) and va > 2:
-                result['Outliers'].values[i1] = '[' + str(lower_qty) + ',' + str(high_qty) + ']'
+            IQR_1p5 = round(1.5*(IQR_75-IQR_25),roundn)
+            lowerLimit = round(IQR_25 - IQR_1p5, roundn)
+            upperLimit = round(IQR_75 + IQR_1p5, roundn)
+            if interest == 'all':
+                value_interest = np.nan
             else:
-                result['Outliers'].values[i1] = ''
-            p=0
-            mu = df[i].mean()
-            sigma = statistics.stdev(df[i])
-            if not math.isnan(sigma) and not sigma == 0:
-                sizex = int(df[i].shape[0])
-                nom_rand = np.random.normal(mu, sigma, sizex)
-                rom_test = df[i].tolist()
-                st2, pval_2 = stats.ks_2samp(nom_rand, rom_test)
-                stn, pval_n = stats.normaltest(rom_test)
-                # ++++++++++++++++++++++++++++++++++++++++++++++++
-                p = max([pval_n, pval_2])
+                value_interest = round(average_byCategory[average_byCategory[col].name].loc[interest], roundn)
 
-                p = Decimal(p)
-                if abs(p.as_tuple().exponent) >= 4:
-                    p = float('{0:1.0e}'.format(p))
-                result['pval(Norm)'].values[i1] = p
+            mean_categories = round(average_byCategory[average_byCategory[col].name].mean(), roundn)
+            median_categories = round(average_byCategory[average_byCategory[col].name].median(), roundn)
+            order_x = ''
+            rank_x = ''
+            outlier_num = 0
+            pval = 0
+            stati = 0
+            null_c = 0
+            notnull_c = 0
+            is_normal = ''
+            aprox = ''
+            sttdev = 0
+            if value_interest > upperLimit:
+                outlier = 'yes'
+                #var_outliers_in_category.append(col)
+            elif value_interest < lowerLimit:
+                outlier = 'yes'
+                #var_outliers_in_category.append(col)
             else:
-                result['pval(Norm)'].values[i1] = 0
-        else:
-            result['pval(Norm)'].values[i1] = 0
-        i1+=1
-    result.reset_index(inplace=True)
-    result=result.rename(columns = {'index':'VARIABLES'})
-    return (result)
+                outlier = '-'
+            order_x = ''
+            rank_x = ''
+            outlier_num = 0
+            pval = 0
+            stati = 0
+            null_c = average_byCategory[col].isnull().sum()
+            notnull_c = average_byCategory[col].notna().sum()
+            is_normal = ''
+            aprox = ''
+            sttdev = 0
+            if value_interest >= col_mean and np.isnan(value_interest) == False:
+                col_x = average_byCategory[[col]].sort_values(col, axis = 0, ascending = False).reset_index()
+                rank_x = str(int(col_x[col_x[category]==interest].index.tolist()[0])+1)
+                order_x = 'highest: ' + rank_x + '/' + str(notnull_c)
+            elif value_interest < col_mean and np.isnan(value_interest) == False:
+                col_x = average_byCategory[[col]].sort_values(col, axis = 0, ascending = True).reset_index()
+                rank_x = str(int(col_x[col_x[category]==interest].index.tolist()[0])+1)
+                order_x = 'lowest: ' + rank_x + '/' + str(notnull_c)
+            else:
+                order_x = '-'
+                col_x = average_byCategory[[col]].sort_values(col, axis = 0, ascending = False).reset_index()
+            if notnull_c < 3:
+                pval = 0
+                stati = 0
+            else:
+                dfra = col_x[col]
+                dfmean = col_x[col].mean()
+                sttdev = stdev(col_x[col])
+                if math.isnan(sttdev) or sttdev == 0:
+                    pval = 0
+                    stati = 0
+                else:
+                    s = str(stats.kstest(dfra, 'norm', args=(dfmean, sttdev)))
+                    pval = round(float(s.split("pvalue=",1)[1].split(")",1)[0]),4)
+                    stati = round(float(s.split("statistic=",1)[1].split(",",1)[0]),4)
+                if pval > stati:
+                    is_normal = 'Yes'
+                    aprox = round(pval/stati,2)
+                else:
+                    is_normal = ''
+                    aprox = ''
+            del col_x
+            col_x = average_byCategory[[col]].sort_values(col, axis = 0, ascending = False).reset_index()
+            outlier_numUPPER = col_x[col_x[col] > upperLimit].shape[0]
+            list_outL_UPPER = col_x[col_x[col] > upperLimit].values.tolist()
+
+            if len(list_outL_UPPER) > 0:
+                dictionary_allOutliers['upper: ' + col] = list_outL_UPPER
+                dictionary_upper_outliers[col] = list_outL_UPPER
+                #dictionary_upperOutliers['upper: ' + col] = list_outL_UPPER
+
+
+            del col_x
+            col_x = average_byCategory[[col]].sort_values(col, axis = 0, ascending = True).reset_index()
+            outlier_numLOWER = col_x[col_x[col] < lowerLimit].shape[0]
+            list_outL_LOWER = col_x[col_x[col] < lowerLimit].values.tolist()
+
+            if len(list_outL_LOWER) > 0:
+                dictionary_allOutliers['lower: ' + col] = list_outL_LOWER
+                dictionary_lower_outliers[col] = list_outL_LOWER
+                #dictionary_lowerOutliers['lower: ' + col] = list_outL_LOWER
+
+            outlier_range = '[' + str(outlier_numLOWER) + ', ' + str(outlier_numUPPER) + ']'
+
+            new_Row = {interest: col, 'is_Outlier':outlier, 'Rank_inList':order_x, 'Outliers [Lower,Upper]':outlier_range, 'null vs available': str(null_c) + ' -- ' + str(notnull_c), 'IQR_Limit(1.5)':f'[{lowerLimit}, {upperLimit}]', 'Mean: ' + interest: str(value_interest), 'mean':str(mean_categories), 'median' : str(median_categories), 'aprox_normal': is_normal + '-> ' + str(aprox)}
+            descriptive_table = descriptive_table.append(new_Row, ignore_index=True)
+
+            new_Row2 = {'Characteristics': col, 'Outliers [Lower,Upper]':outlier_range, 'null vs available': str(null_c) + ' -- ' + str(notnull_c), 'IQR_Limit(1.5)':f'[{lowerLimit}, {upperLimit}]', 'mean':str(mean_categories), 'median' : str(median_categories), 'aprox_normal': is_normal + '-> ' + str(aprox)}
+            descriptive_table2 = descriptive_table2.append(new_Row2, ignore_index=True)
+
+    if request == 'table_interest':
+        return (descriptive_table)
+    elif request == 'table':
+        return (descriptive_table2)
+    elif request == 'dictionary_Outliers':
+        return (dictionary_allOutliers)
+    elif request == 'dictionary_upper_outliers':
+        return (dictionary_upper_outliers)
+    elif request == 'dictionary_lower_outliers':
+        return (dictionary_lower_outliers)
+
+    
+class categorical_items:
+    '''Help on package categorical_items:
+
+NAME
+    categorical_items
+
+DESCRIPTION
+    Identify, compare and rank categorical items by each of their characteristics given a dataset.
+    Items can be of any kind, such as: objects, brands, or people.
+    If items are repeated they will get averaged.
+    =====================================================================
+    
+    **categorical_items** is a Python package that helps you quickly identify
+    the distribution & ranking of your items based on each of their characteristics.
+    
+    This package can help you identify outlier items for each characteristic and contains
+    functions that can asists you to perform **real world** data analysis in Python.
+    
+
+    
+    Main Features
+    -------------
+    Here are the things that categorical_items does well:
+    
+      - Identifies upper and lower outlier items for each characteristic in the dataset.
+      - Identifies null and available items for each characteristics.
+      - Displays the value limits of the Inter Quartile Range (1.5 IQR).
+      - Displays the mean and median for each characteristic.
+      - Identifies characteristics that aproximate a normal distribution.
+      - Ranking of a specific item for every characteristic in the dataset.
+      - Ranking all items by averaging performance of all characteristics in %. 
+        User defines if max or min is best performance for every characteristic.
+
+PACKAGE CONTENTS
+    distribution_ofitems (package)
+    rankings_ofsingleitem (package)
+    rankings_ofallitems (package)
+    dictionary_outliers (package)
+    dictionary_nulls (package)
+
+SUBMODULES
+    non
+
+FUNCTIONS
+    non
+
+DATA
+    non
+
+VERSION
+    1.0.0'''
+    
+    def data_view(df, n_rows):
+        n_rows +=1
+        pd.set_option('display.max_rows', n_rows)
+        nulls = df.isnull().sum()
+        counts = df.count()
+        means = df.mean()
+        types = df.dtypes
+        result = pd.concat([nulls, counts, types, means], axis = 1, sort=False)
+        result.rename(columns={0: 'NULLS', 1: 'COUNT', 2: 'TYPES', 3:'MEAN'}, inplace=True)
+        result
+        result['SAMPLE'] = ''
+        i1 = 0
+        for i in df.columns:
+            list1 = df[i][0:10].to_list()
+            result['SAMPLE'].values[i1] = str(list1)
+            i1+=1
+        result.reset_index(inplace=True)
+        return (result)
+    
+    def distribution_ofitems(dataframe_Table, categories_colName, RoundN, VisibleR):
+        '''This function takes your categorical items datasets and provides a description 
+        of the distribution.'''
+        interest = 'all'
+        return juan_categories_describe1(dataframe_Table, categories_colName, interest, RoundN, 'table', VisibleR)
+
+    def rankings_ofsingleitem(dataframe_Table, categories_colName, item, RoundN, visible_rows):
+        '''Use this function to check if a specific item is outlier for every characteristic, and to know its ranking for all characteristics.'''
+        return juan_categories_describe1(dataframe_Table, categories_colName, item, RoundN, 'table_interest', visible_rows)
+
+    def outliers_from_variable(dataframe_Table, categories_colName, variable):
+        '''Help on function outliers_from_variable in categorical_items.
+        
+        Description:
+        ---
+        Provides a list of all outlier items from a specific variable defined by user.
+        
+        Use Function:
+        ---
+        lower_outliers, upper_outliers = categorical_items.dictionary_outliers(dataframe_Table, categories_colName, variable)
+        
+        Parameters:
+        ---
+            dataframe_Table : dataframe
+                Provide your DataFrame which must contain a column with categorical items to be analyzed.
+            
+            categories_colName : string
+                Column name of column containing the categorical items.
+                
+            variable: string
+                Name of variables to search for outlier items.
+                
+        Returns
+        ---
+        2 strings containing all upper and lower outlier items and their respective values.
+        
+        '''
+        roundn = 10
+        visible_rows = 2
+        interest = 'all'
+        l=''
+        u=''
+        a = juan_categories_describe1(dataframe_Table, categories_colName, interest, roundn, 'dictionary_Outliers', visible_rows)
+        if 'lower: ' + variable in a:
+            l += 'lower outliers: ' + str(a['lower: ' + variable])
+        if 'upper: ' + variable in a:
+            u += 'upper outliers: ' + str(a['upper: ' + variable])
+        return l, u      
+    
+    
+    def dictionary_upper_outliers(dataframe_Table, categories_colName):
+        roundn = 10
+        visible_rows = 2
+        interest = 'all'
+        a = juan_categories_describe1(dataframe_Table, categories_colName, interest, roundn, 'dictionary_upper_outliers', visible_rows)
+        return a
+    
+    def dictionary_lower_outliers(dataframe_Table, categories_colName):
+        roundn = 10
+        visible_rows = 2
+        interest = 'all'
+        a = juan_categories_describe1(dataframe_Table, categories_colName, interest, roundn, 'dictionary_lower_outliers', visible_rows)
+        return a
