@@ -29,8 +29,9 @@ This library also displays charts to view the normal approximation of your varia
 ```
 ```diff
 + import requests
-+ url = 'https://raw.githubusercontent.com/juanduranc/categorical_distribution_juan/master/info'
++ url = 'https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/library'
 + exec(requests.get(url).text)
++ help(clean_assist)
 ```
 
 <!DOCTYPE html>
