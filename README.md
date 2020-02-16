@@ -21,7 +21,7 @@ This library also displays charts to view the normal approximation of your varia
 <html>
 <body>
 
-<h3>Sample</h3><br>
+<h3>Example of library usage and interpretation:</h3>
 The following table is a sample of an output clean_assist(df, n_rows, n_round) output:<br><br>
 
 <table>
