@@ -113,11 +113,11 @@ This library also displays charts to view the normal approximation of your varia
       <td>1e-159</td>
 </table><br><br><br>
 Examples of findings:<br>
-+ AVG_CLICKS_PER_VISIT has a similar mean and mean, it aproximates a normal distribution and has 6 lower outliers.<br>
-+ MEDIAN_MEAL_RATING has 47 nulls which need imputation.<br>
-+ Revenue is the only float variables, the rest are integer.<br>
-+ TOTAL_PHOTOS_VIEWED has a median of 0 and 120 upper outliers. This means most people dont look view photos.<br>
-+ CROSS_SELL_SUCCESS has 2 unique values. From the column named sample you can see only ones and zeros. This is a binary or boolean column.<br>
+* AVG_CLICKS_PER_VISIT has a similar mean and mean, it aproximates a normal distribution and has 6 lower outliers.<br>
+* MEDIAN_MEAL_RATING has 47 nulls which need imputation.<br>
+* Revenue is the only float variables, the rest are integer.<br>
+* TOTAL_PHOTOS_VIEWED has a median of 0 and 120 upper outliers. This means most people dont look view photos.<br>
+* CROSS_SELL_SUCCESS has 2 unique values. From the column named sample you can see only ones and zeros. This is a binary or boolean column.<br>
 <br><br><br><br>
 2. The following image is an output form the function: view_normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
 
