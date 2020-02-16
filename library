@@ -78,26 +78,27 @@ def clean_assist(df, n_rows, n_round):
 
 
 
-def view_normality(df, list1, print_img, size_x, size_y, font_size):
+def view_normality(df, list_var, print_img, size_x, size_y, font_size):
         """
     Displays histograms to compare your variables to a normal distribution.
     
     PARAMETERS
     ----------
     df           : DataFrame you would like to analyze
-    print_img    : Number of variables to display
+    list_var     : Name of columns to analyze in a list format
+    print_img    : input 'y' to print image or 'n' to not print.
     size_x       : width of the image output
     size_y       : height of the image output
     font_size    : font size of the titles and headers
     """
         fig, ax = plt.subplots(figsize = (size_x, size_y))
         inn = 0
-        for col in list1:
+        for col in list_var:
             if df[col].dtype.name != 'object':
                 inn+=1
         inn = inn * 2 + 2
         i = 0
-        for col in list1:
+        for col in list_var:
             i+=1
             if df[col].dtype.name == 'object':
                 i-=1
