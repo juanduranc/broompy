@@ -23,15 +23,19 @@ This library also displays charts to view the normal approximation of your varia
 The following table is a sample of clean_assist(df, n_rows, n_round) output:<br><br>
 
 <table style="width:100%">
-<tr>
-      <td>Model</td>
-      <td>Engine</td>
-      <td>Cylinders</td>
-      <td>Horsepower</td>
-      <td>HighwayMPG</td>
+     <tr>
+      <th>VARIABLES</th>
+      <th>NULLS</th>
+      <th>COUNT</th>
+      <th>TYPES</th>
+      <th>MEAN</th>
+      <th>MEDIAN</th>
+      <th>UNIQUES</th>
+      <th>SAMPLE</th>
+      <th>Outliers</th>
+      <th>pval(Norm)</th>
     </tr>
     <tr>
-      <th>0</th>
       <td>AVG_CLICKS_PER_VISIT</td>
       <td>0</td>
       <td>1946</td>
@@ -44,7 +48,6 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>0.03</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>MEDIAN_MEAL_RATING</td>
       <td>0</td>
       <td>1946</td>
@@ -57,7 +60,6 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>3e-06</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>LARGEST_ORDER_SIZE</td>
       <td>0</td>
       <td>1946</td>
@@ -70,7 +72,6 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>3e-25</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>TOTAL_PHOTOS_VIEWED</td>
       <td>0</td>
       <td>1946</td>
