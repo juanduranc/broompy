@@ -122,7 +122,7 @@ Examples of findings:<br>
   <li>CROSS_SELL_SUCCESS has 2 unique values. From the column named sample you can see only ones and zeros. This is a binary or boolean column.</li>
 </ul>
 <br>
-2. The following image is a sample output from the function: clean_assist.normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
+2. Next, a sample output from the function: clean_assist.normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
 <img src="https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/normality.png" />
 <br>
 Histograms' interpretation:<br>
