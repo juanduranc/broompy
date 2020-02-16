@@ -126,10 +126,10 @@ Examples of findings:<br>
 <br>
 Histograms' interpretation:<br>
 <ul>
-  <li>MEDIAN_MEAL_RATING has interger values and it mimisc a normal distribution</li>
-  <li>AVG_CLICKS_PER_VISIT is the colsest variable to a normal distribution with a p value of 0.03</li>
-  <li>REVENUE is right skewed with 82 upper outliers</li>
-  <li>TOTAL_PHOTOS_VIEWED has too many zero values. It is also right skewed and far from being a normal distribution</li>
+  <li>MEDIAN_MEAL_RATING has interger values and it mimisc a normal distribution.</li>
+  <li>AVG_CLICKS_PER_VISIT is the colsest variable to a normal distribution with a p value of 0.03.</li>
+  <li>REVENUE is right skewed with 82 upper outliers.</li>
+  <li>TOTAL_PHOTOS_VIEWED has too many zero values. It is also right skewed and far from being a normal distribution.</li>
 </ul>
 </body>
 </html>
