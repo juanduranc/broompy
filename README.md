@@ -35,7 +35,7 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <th>Outliers</th>
       <th>pval(Norm)</th>
     </tr>
-    <tr>
+    <tr height="100">
       <td>AVG_CLICKS_PER_VISIT</td>
       <td>0</td>
       <td>1946</td>
