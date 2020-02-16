@@ -95,5 +95,7 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>1e-159</td>
 </table>
 
+<img src="https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/normality.png" />
+
 </body>
 </html>
