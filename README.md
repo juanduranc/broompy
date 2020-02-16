@@ -25,7 +25,7 @@ This library also displays charts to view the normal approximation of your varia
 
 ### To import the library: copy paste the green colored code to your python code:
 ```diff
-- Note: Ignore the plus(+) signs
+- Note: Delete the plus(+) signs after pasting code
 ```
 ```diff
 + import requests
