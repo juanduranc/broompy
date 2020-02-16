@@ -86,7 +86,7 @@ def view_normality(df, list_var, print_img, size_x, size_y, font_size):
     ----------
     df           : DataFrame you would like to analyze
     list_var     : Name of columns to analyze in a list format
-    print_img    : input 'y' to print image or 'n' to not print.
+    print_img    : input 'y' to print image or 'n' to not print
     size_x       : width of the image output
     size_y       : height of the image output
     font_size    : font size of the titles and headers
