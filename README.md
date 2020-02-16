@@ -67,7 +67,7 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>2107.3</td>
       <td>1740.0</td>
       <td>859</td>
-      <td>[1880, 1495, 2572.5, 1647, 1923, 1250, 4665, 1690, 1710, 1770]</td>
+      <td>[1880, 1495, 2572.5, 1647, 1923, 1250, 4665]</td>
       <td>[0,82]</td>
       <td>1e-21</td>
     </tr>
