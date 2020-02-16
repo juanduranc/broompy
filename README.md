@@ -10,7 +10,7 @@ This is a simple library to help data scientists observe how to clean their data
 	<meta charset="utf-8"/>
 </head>
 <body>
-<h1 style="color:#28a745;">Template</h1>
+<h1 class="text-purple">Template</h1>
 
 </body>
 </html>
