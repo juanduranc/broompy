@@ -17,7 +17,7 @@ This library also displays charts to view the normal approximation of your varia
     
     PARAMETERS<br>
     ----------<br>
-    df  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : DataFrame you would like to analyze<br>
+    df  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : DataFrame you would like to analyze<br>
     print_img &nbsp;&nbsp; : Number of variables to display<br>
     size_x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  width of the image output<br>
     size_y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  height of the image output<br>
