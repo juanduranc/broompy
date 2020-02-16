@@ -74,7 +74,6 @@ def clean_assist(df, n_rows, n_round):
             i1+=1
         result.reset_index(inplace=True)
         result=result.rename(columns = {'index':'VARIABLES'})
-        print("Data Loaded ok")
         return (result)
 
 
@@ -121,3 +120,4 @@ def view_normality(df, list1, print_img, size_x, size_y, font_size):
         if print_img == "y":
             plt.savefig('Histrograms_all.png')
         plt.show()
+print("Data Loaded ok")
