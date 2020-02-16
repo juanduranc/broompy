@@ -40,10 +40,10 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>0</td>
       <td>1946</td>
       <td>int64</td>
-      <td>13.508222</td>
+      <td>13.5</td>
       <td>13.0</td>
       <td>15</td>
-      <td><font size="6">[11, 13, 12, 13, 13, 17, 10, 13, 12, 12]</font></td>
+      <td>[11, 13, 12, 13, 13, 17, 10, 13, 12, 12]</td>
       <td>[6,0]</td>
       <td>0.03</td>
     </tr>
@@ -52,7 +52,7 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>0</td>
       <td>1946</td>
       <td>int64</td>
-      <td>2.794964</td>
+      <td>2.8</td>
       <td>3.0</td>
       <td>5</td>
       <td>[3, 3, 3, 3, 3, 2, 4, 3, 3, 3]</td>
@@ -64,7 +64,7 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>0</td>
       <td>1946</td>
       <td>int64</td>
-      <td>4.436793</td>
+      <td>4.4</td>
       <td>4.0</td>
       <td>12</td>
       <td>[6, 4, 3, 3, 3, 3, 6, 5, 4, 7]</td>
@@ -76,7 +76,7 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>0</td>
       <td>1946</td>
       <td>int64</td>
-      <td>106.433710</td>
+      <td>106.4</td>
       <td>0.0</td>
       <td>371</td>
       <td>[0, 90, 0, 0, 253, 0, 705, 0, 0, 0]</td>
@@ -87,7 +87,7 @@ The following table is a sample of clean_assist(df, n_rows, n_round) output:<br>
       <td>0</td>
       <td>1946</td>
       <td>int64</td>
-      <td>0.678828</td>
+      <td>0.7</td>
       <td>1.0</td>
       <td>2</td>
       <td>[1, 1, 1, 0, 1, 1, 0, 1, 1, 1]</td>
