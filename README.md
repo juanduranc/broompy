@@ -18,10 +18,7 @@ Main Features
   
 Installation
 -------------
-pip install broompy
-
-Usage
--------------
+- [x] pip install broompy
 - [x] import broompy<br>
 - [x] help(broompy.core)<br>
 
@@ -118,7 +115,8 @@ broompy.core.table(dataframe, n_rows, n_round)<br>
       <td></td>
       <td>1e-159</td>
 </table><br>
-Examples of findings:<br>
+
+**Examples of findings:**<br>
 <ul>
   <li>AVG_CLICKS_PER_VISIT has a similar mean and mean, it aproximates a normal distribution and has 6 lower outliers.</li>
   <li>MEDIAN_MEAL_RATING has 47 nulls which need imputation.</li>
@@ -133,7 +131,8 @@ Examples of findings:<br>
 broompy.core.normality(dataframe, list_var, "y", 10, 30, 10)<br><br>
 <img src="https://raw.githubusercontent.com/juanduranc/imgs/master/normality.png" />
 <br>
-Histograms' interpretation:<br>
+
+**Histograms' interpretation:**<br>
 <ul>
   <li>MEDIAN_MEAL_RATING has interger values and it mimisc a normal distribution.</li>
   <li>AVG_CLICKS_PER_VISIT is the colsest variable to a normal distribution with a p value of 0.03.</li>
@@ -148,6 +147,17 @@ broompy.core.scatter(df, explanatory_var, response_var, print_img, size_x, size_
 
 <img src="https://raw.githubusercontent.com/juanduranc/imgs/master/scatter1.png" />
 <img src="https://raw.githubusercontent.com/juanduranc/imgs/master/scatter2.png" />
+
+
+**Examples of findings:**<br>
+<ul>
+  <li>The more time users watch preparation videos, the hgiher the expected revenue.</li>
+  <li>The more clicks a customers performs at the website, the less revenue they might bring.</li>
+  <li>Ideally customers should take between 1 and 2 master classes.</li>
+  <li></li>
+</ul>
+
+
 </body>
 </html>
 
