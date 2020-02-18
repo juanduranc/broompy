@@ -1,14 +1,17 @@
 # broompy
 **broompy** is a simple Python library designed to 
 help data scientists observe a summary of their 
-DataFrame and facilitate data cleaning. This library 
-also displays charts to view the normal approximation 
-of variable distributions and scatter plot to
-identify correlation.
+DataFrame and facilitate data cleaning. It display 
+DataFrame variables and reveal features that require 
+cleaning or inspection.
+
+This library also displays charts to view the normal 
+approximation of variable distributions and scatter 
+plot to identify correlation.
 
 Main Features
 -------------
-  - Display DataFrame variables and reveal features 
+  - Display DataFrame variables and reveal features. 
     that require cleaning or inspection.
   - Display count of null and available data.
   - Display mean, median and 1.5 IQR outliers count.
