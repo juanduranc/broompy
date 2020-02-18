@@ -16,8 +16,6 @@ Main Features
   - Identify the normal approximation using pvalue.
   - Show a dataset sample to understand data content.
 
-[![CircleCI](https://img.shields.io/circleci/project/github/ntkme/github-buttons/master.svg)](https://circleci.com/gh/ntkme/github-buttons)
-[![Codecov](https://img.shields.io/codecov/c/github/ntkme/github-buttons.svg)](https://codecov.io/gh/ntkme/github-buttons)
 [![npm](https://img.shields.io/npm/v/github-buttons)](https://www.npmjs.com/github-buttons)
 
 
