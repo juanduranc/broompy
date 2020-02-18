@@ -3,11 +3,10 @@
 help data scientists observe a summary of their 
 DataFrame and facilitate data cleaning. It display 
 DataFrame variables and reveal features that require 
-cleaning or inspection.
-
-This library also displays charts to view the normal 
-approximation of variable distributions and scatter 
-plot to identify correlation.
+cleaning or inspection. This library also displays 
+charts to view the normal approximation of 
+variable distributions and scatter plot to identify 
+correlation.
 
 Main Features
 -------------
