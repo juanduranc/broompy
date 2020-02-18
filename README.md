@@ -11,8 +11,6 @@ scatter plot to visualize correlation.
 
 Main Features
 -------------
-  - Display DataFrame variables and reveal features. 
-    that require cleaning or inspection.
   - Display count of null and available data.
   - Display mean, median and 1.5 IQR outliers count.
   - Identify data types of each variable.
