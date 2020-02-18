@@ -127,6 +127,7 @@ Examples of findings:<br>
   <li>CROSS_SELL_SUCCESS has 2 unique values. From the column named sample you can see only ones and zeros. This is a binary or boolean column.</li>
 </ul>
 <br>
+
 **2. Next, a sample output from the function:**<br>
 
 broompy.core.normality(dataframe, list_var, "y", 10, 30, 10)<br>
@@ -140,6 +141,7 @@ Histograms' interpretation:<br>
   <li>TOTAL_PHOTOS_VIEWED has too many zero values. It is also right skewed and far from being a normal distribution.</li>
 </ul>
 <br>
+
 **3. Other usage, scatter:**<br>
 
 broompy.core.scatter(df, explanatory_var, response_var, print_img, size_x, size_y, font_size, green_blue='g')<br>
