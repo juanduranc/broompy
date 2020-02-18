@@ -41,8 +41,7 @@ Usage
   
 <h3>Example of library usage and interpretation:</h3>
 1. The following table is a sample of an output form the function:<br><br>
-
-***broompy.core.table(data_f, 10, 2)***
+***broompy.core.table(dataframe, n_rows, n_round)***
 
 <table>
      <tr>
@@ -125,7 +124,8 @@ Examples of findings:<br>
   <li>CROSS_SELL_SUCCESS has 2 unique values. From the column named sample you can see only ones and zeros. This is a binary or boolean column.</li>
 </ul>
 <br>
-2. Next, a sample output from the function: clean_assist.normality(df, list_var, print_img, size_x, size_y, font_size)<br><br>
+2. Next, a sample output from the function:<br><br>
+***broompy.core.normality(dataframe, list_var, "y", 10, 30, 10)***
 <img src="https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/normality.png" />
 <br>
 Histograms' interpretation:<br>
@@ -135,6 +135,9 @@ Histograms' interpretation:<br>
   <li>REVENUE is right skewed with 82 upper outliers.</li>
   <li>TOTAL_PHOTOS_VIEWED has too many zero values. It is also right skewed and far from being a normal distribution.</li>
 </ul>
+<br>
+3. Other usage, scatter:<br><br>
+***broompy.core.scatter(df, explanatory_var, response_var, print_img, size_x, size_y, font_size, green_blue='g')***
 </body>
 </html>
 
