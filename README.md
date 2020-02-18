@@ -15,30 +15,15 @@ Main Features
   - Identify count of unique values per variable.
   - Identify the normal approximation using pvalue.
   - Show a dataset sample to understand data content.
+  
+Installation
+-------------
+pip install broompy
 
-[![npm](https://img.shields.io/npm/v/github-buttons)](https://www.npmjs.com/github-buttons)
-
-
-
-**broompy is composed of 3 functions:**
----------
-1. **clean_assist.table(df, n_rows, n_round)**<br><br>
-    Displays relevant features to help you on data cleaning and analysis.<br>
-    
-    ***Parameters***<br>
-    df  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : DataFrame you would like to analyze<br>
-    n_rows &nbsp;&nbsp; : Number of variables to display<br>
-    n_round &nbsp; :  Number of decimals to round calculations<br><br>
-2. ***clean_assist.normality(df, list_var, print_img, size_x, size_y, font_size)***<br><br>
-    Displays histograms to compare the your variables to a normal distribution.<br>
-    
-    ***Parameters***<br>
-    df  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : DataFrame you would like to analyze<br>
-    list_var &nbsp;&nbsp; : Name of columns to analyze in a list format<br>
-    print_img &nbsp;&nbsp; : input 'y' to print image or 'n' to not print<br>
-    size_x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  width of the image output<br>
-    size_y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  height of the image output<br>
-    font_size &nbsp;&nbsp; :  font size of the titles and headers<br>
+Usage
+-------------
+import broompy
+help(broompy.core)
 
 ### Installation requirements:
 ```diff
