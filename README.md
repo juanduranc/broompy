@@ -22,8 +22,8 @@ pip install broompy
 
 Usage
 -------------
-import broompy
-help(broompy.core)
+import broompy<br>
+help(broompy.core)<br>
 
 ### Installation requirements:
 ```diff
@@ -40,7 +40,8 @@ help(broompy.core)
 <body>
   
 <h3>Example of library usage and interpretation:</h3>
-1. The following table is a sample of an output form the function: clean_assist.table(df, n_rows, n_round)<br><br>
+1. The following table is a sample of an output form the function:<br>
+**broompy.core.table(data_f, 10, 2)***<br><br>
 
 <table>
      <tr>
