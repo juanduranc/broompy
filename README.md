@@ -27,12 +27,12 @@ help(broompy.core)<br>
 
 ### Installation requirements:
 ```diff
-+ import statistics
-+ import pandas as pd
-+ from scipy import stats
-+ import seaborn as sns
-+ import pylab as plt
-+ import numpy as np
++ pandas
++ seaborn
++ numpy
++ pylab
++ scipy
++ statistic
 ```
 
 <!DOCTYPE html>
@@ -41,7 +41,8 @@ help(broompy.core)<br>
   
 <h3>Example of library usage and interpretation:</h3>
 1. The following table is a sample of an output form the function:<br>
-**broompy.core.table(data_f, 10, 2)***<br><br>
+
+**broompy.core.table(data_f, 10, 2)***
 
 <table>
      <tr>
