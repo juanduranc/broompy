@@ -3,7 +3,8 @@
 help data scientists observe a summary of their 
 DataFrame and facilitate data cleaning. This library 
 also displays charts to view the normal approximation 
-of variable distributions.
+of variable distributions and scatter plot to
+identify correlation.
 
 Main Features
 -------------
@@ -118,9 +119,9 @@ broompy.core.table(dataframe, n_rows, n_round)<br>
 
 **Examples of findings:**<br>
 <ul>
-  <li>AVG_CLICKS_PER_VISIT has a similar mean and mean, it aproximates a normal distribution and has 6 lower outliers.</li>
+  <li>AVG_CLICKS_PER_VISIT approximates a normal distribution and has 6 lower outliers.</li>
   <li>MEDIAN_MEAL_RATING has 47 nulls which need imputation.</li>
-  <li>Revenue is the only float variables, the rest are integer.</li>
+  <li>Revenue is the only float variable. The rest are integer.</li>
   <li>TOTAL_PHOTOS_VIEWED has a median of 0 and 120 upper outliers. This means most people dont look view photos.</li>
   <li>CROSS_SELL_SUCCESS has 2 unique values. From the column named sample you can see only ones and zeros. This is a binary or boolean column.</li>
 </ul>
@@ -134,8 +135,8 @@ broompy.core.normality(dataframe, list_var, "y", 10, 30, 10)<br><br>
 
 **Histograms' interpretation:**<br>
 <ul>
-  <li>MEDIAN_MEAL_RATING has interger values and it mimisc a normal distribution.</li>
-  <li>AVG_CLICKS_PER_VISIT is the colsest variable to a normal distribution with a p value of 0.03.</li>
+  <li>MEDIAN_MEAL_RATING has integer  values and it mimics a normal distribution.</li>
+  <li>AVG_CLICKS_PER_VISIT is the closest variable to a normal distribution with a p value of 0.03.</li>
   <li>REVENUE is right skewed with 82 upper outliers.</li>
   <li>TOTAL_PHOTOS_VIEWED has too many zero values. It is also right skewed and far from being a normal distribution.</li>
 </ul>
@@ -151,8 +152,8 @@ broompy.core.scatter(df, explanatory_var, response_var, print_img, size_x, size_
 
 **Examples of scatterplot findings:**<br>
 <ul>
-  <li>The more time users watch preparation videos, the hgiher the expected revenue.</li>
-  <li>The more clicks a customers performs at the website, the less revenue they might bring.</li>
+  <li>The more time users watch preparation videos, the higher the expected revenue.</li>
+  <li>The more clicks customers performs at the website, the less revenue they might bring.</li>
   <li>Ideally, customers should take between 1 and 2 master classes.</li>
 </ul>
 
