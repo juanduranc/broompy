@@ -16,6 +16,11 @@ Main Features
   - Identify the normal approximation using pvalue.
   - Show a dataset sample to understand data content.
 
+[![CircleCI](https://img.shields.io/circleci/project/github/ntkme/github-buttons/master.svg)](https://circleci.com/gh/ntkme/github-buttons)
+[![Codecov](https://img.shields.io/codecov/c/github/ntkme/github-buttons.svg)](https://codecov.io/gh/ntkme/github-buttons)
+[![npm](https://img.shields.io/npm/v/github-buttons)](https://www.npmjs.com/github-buttons)
+
+
 
 **broompy is composed of 3 functions:**
 ---------
@@ -50,30 +55,7 @@ Main Features
 <!DOCTYPE html>
 <html>
 <body>
-    
-    <div class="package-header__left">
-      <h1 class="package-header__name">
-        broompy 2.1.1
-      </h1>
-
-      
-      <p class="package-header__pip-instructions">
-        <span id="pip-command">pip install broompy</span>
-        <button type="button" class="copy-tooltip copy-tooltip-s" data-clipboard-target="#pip-command" data-tooltip-label="Copy to clipboard">
-          <i class="fa fa-copy" aria-hidden="true"></i>
-          <span class="sr-only">Copy PIP instructions</span>
-        </button>
-      </p>
-      
-    </div>
-    
-    
-    
-    
-    
-    
-    
-
+  
 <h3>Example of library usage and interpretation:</h3>
 1. The following table is a sample of an output form the function: clean_assist.table(df, n_rows, n_round)<br><br>
 
