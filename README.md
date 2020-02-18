@@ -1,9 +1,9 @@
 # broompy
 **broompy** is a simple Python library designed to 
 help data scientists observe a summary of their 
-DataFrame to facilitate cleaning. This library also 
-displays charts to view the normal approximation of 
-variable distributions.
+DataFrame and facilitate data cleaning. This library 
+also displays charts to view the normal approximation 
+of variable distributions.
 
 Main Features
 -------------
