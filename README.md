@@ -17,7 +17,7 @@ Main Features
   - Identify count of unique values per variable.
   - Identify the normal approximation using pvalue.
   - Show a dataset sample to understand data content.
-  - Visualize trends with histograms and scatter plot.
+  - Visualize trends with histograms and scatter plots.
   
 Installation
 -------------
