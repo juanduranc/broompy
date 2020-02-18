@@ -141,7 +141,7 @@ broompy.core.normality(dataframe, list_var, "y", 10, 30, 10)<br><br>
 </ul>
 <br>
 
-**3. Other usage, scatter:**<br>
+**3. Scatterplots usage:** broompy.core.scatter<br>
 
 broompy.core.scatter(df, explanatory_var, response_var, print_img, size_x, size_y, font_size, green_blue='g')<br><br>
 
@@ -149,7 +149,7 @@ broompy.core.scatter(df, explanatory_var, response_var, print_img, size_x, size_
 <img src="https://raw.githubusercontent.com/juanduranc/imgs/master/scatter2.png" />
 
 
-**Examples of findings:**<br>
+**Examples of scatterplot findings:**<br>
 <ul>
   <li>The more time users watch preparation videos, the hgiher the expected revenue.</li>
   <li>The more clicks a customers performs at the website, the less revenue they might bring.</li>
