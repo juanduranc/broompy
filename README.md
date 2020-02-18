@@ -34,6 +34,8 @@ help(broompy.core)<br>
 + scipy
 + statistic
 ```
+- [x] pandas
+- [ ] seaborn
 
 <!DOCTYPE html>
 <html>
@@ -41,8 +43,7 @@ help(broompy.core)<br>
   
 <h3>Example of library usage and interpretation:</h3>
 1. The following table is a sample of an output form the function:<br>
-
-  **broompy.core.table(data_f, 10, 2)**
+- **broompy.core.table(data_f, 10, 2)**
 
 <table>
      <tr>
