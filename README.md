@@ -40,8 +40,9 @@ Usage
 <body>
   
 <h3>Example of library usage and interpretation:</h3>
-1. The following table is a sample of an output form the function:<br>
--  **broompy.core.table(data_f, 10, 2)**
+1. The following table is a sample of an output form the function:<br><br>
+
+***broompy.core.table(data_f, 10, 2)***
 
 <table>
      <tr>
