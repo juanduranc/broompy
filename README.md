@@ -156,7 +156,7 @@ broompy.core.scatter(df, explanatory_var, response_var, print_img, size_x, size_
 <ul>
   <li>The more time users watch preparation videos, the higher the expected revenue.</li>
   <li>The more clicks customers performs at the website, the less revenue they might bring.</li>
-  <li>Ideally, customers should take between 1 and 2 master classes.</li>
+  <li>Customers should take at least 1 master class.</li>
 </ul>
 
 
