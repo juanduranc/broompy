@@ -39,7 +39,7 @@ Installation
 Example of library usage and interpretation:
 -------------
 
-**1. The following table is a sample of an output form the function:**<br>
+**1. The following table is a sample of an output form the function:** broompy.core.table<br>
 
 broompy.core.table(dataframe, n_rows, n_round)<br>
 
@@ -126,7 +126,7 @@ broompy.core.table(dataframe, n_rows, n_round)<br>
 </ul>
 <br>
 
-**2. Next, a sample output from the function:**<br>
+**2. usage and interpretation of the function:** broompy.core.normality<br>
 
 broompy.core.normality(dataframe, list_var, "y", 10, 30, 10)<br><br>
 <img src="https://raw.githubusercontent.com/juanduranc/imgs/master/normality.png" />
@@ -153,8 +153,7 @@ broompy.core.scatter(df, explanatory_var, response_var, print_img, size_x, size_
 <ul>
   <li>The more time users watch preparation videos, the hgiher the expected revenue.</li>
   <li>The more clicks a customers performs at the website, the less revenue they might bring.</li>
-  <li>Ideally customers should take between 1 and 2 master classes.</li>
-  <li></li>
+  <li>Ideally, customers should take between 1 and 2 master classes.</li>
 </ul>
 
 
