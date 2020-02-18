@@ -26,7 +26,6 @@ Usage
 - [x] help(broompy.core)<br>
 
 ### Installation requirements:
-<span style="font-weight:700">
 ```diff
 + pandas
 + seaborn
@@ -35,7 +34,6 @@ Usage
 + scipy
 + statistic
 ```
-</span>
 
 <!DOCTYPE html>
 <html>
