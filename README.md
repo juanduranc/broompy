@@ -128,7 +128,7 @@ Examples of findings:<br>
 2. Next, a sample output from the function:<br><br>
 
 **broompy.core.normality(dataframe, list_var, "y", 10, 30, 10)**
-<img src="https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/normality.png" />
+<img src="https://raw.githubusercontent.com/juanduranc/broompy/master/normality.png" />
 <br>
 Histograms' interpretation:<br>
 <ul>
