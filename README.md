@@ -1,9 +1,23 @@
-# Clean Assist
+# broompy
+**broompy** is a simple Python library designed to 
+help data scientists observe a summary of their 
+DataFrame to facilitate cleaning. This library also 
+displays charts to view the normal approximation of 
+variable distributions.
 
-Clean Assist is a simple library designed to help data scientists observe a summary of any DataFrame they would like to clean.
-This library also displays charts to view the normal approximation of your variables.<br>
+Main Features
+-------------
+  - Display DataFrame variables and reveal features 
+    that require cleaning or inspection.
+  - Display count of null and available data.
+  - Display mean, median and 1.5 IQR outliers count.
+  - Identify data types of each variable.
+  - Identify count of unique values per variable.
+  - Identify the normal approximation using pvalue.
+  - Show a dataset sample to understand data content.
 
-**Clean Assist is composed of 2 functions:**
+
+**broompy is composed of 3 functions:**
 ---------
 1. **clean_assist.table(df, n_rows, n_round)**<br><br>
     Displays relevant features to help you on data cleaning and analysis.<br>
@@ -23,20 +37,42 @@ This library also displays charts to view the normal approximation of your varia
     size_y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  height of the image output<br>
     font_size &nbsp;&nbsp; :  font size of the titles and headers<br>
 
-### To import the library: copy paste the green colored code to your python code:
+### Installation requirements:
 ```diff
-- Note: Delete the plus(+) signs after pasting code
-```
-```diff
-+ import requests
-+ url = 'https://raw.githubusercontent.com/juanduranc/Clean-Assist/master/library'
-+ exec(requests.get(url).text)
-+ help(clean_assist)
++ import statistics
++ import pandas as pd
++ from scipy import stats
++ import seaborn as sns
++ import pylab as plt
++ import numpy as np
 ```
 
 <!DOCTYPE html>
 <html>
 <body>
+    
+    <div class="package-header__left">
+      <h1 class="package-header__name">
+        broompy 2.1.1
+      </h1>
+
+      
+      <p class="package-header__pip-instructions">
+        <span id="pip-command">pip install broompy</span>
+        <button type="button" class="copy-tooltip copy-tooltip-s" data-clipboard-target="#pip-command" data-tooltip-label="Copy to clipboard">
+          <i class="fa fa-copy" aria-hidden="true"></i>
+          <span class="sr-only">Copy PIP instructions</span>
+        </button>
+      </p>
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    
 
 <h3>Example of library usage and interpretation:</h3>
 1. The following table is a sample of an output form the function: clean_assist.table(df, n_rows, n_round)<br><br>
