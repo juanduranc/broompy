@@ -22,10 +22,11 @@ pip install broompy
 
 Usage
 -------------
-import broompy<br>
-help(broompy.core)<br>
+- [x] import broompy<br>
+- [x] help(broompy.core)<br>
 
 ### Installation requirements:
+<span style="font-weight:700">
 ```diff
 + pandas
 + seaborn
@@ -34,8 +35,7 @@ help(broompy.core)<br>
 + scipy
 + statistic
 ```
-- [x] pandas
-- [ ] seaborn
+</span>
 
 <!DOCTYPE html>
 <html>
