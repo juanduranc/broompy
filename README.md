@@ -7,7 +7,7 @@ DataFrame and facilitate data cleaning. It reveals
 features that require cleaning or inspection. 
 This library also displays charts to view the normal 
 approximation of variable distributions and generates 
-scatter plot to visualize correlation.
+scatter plot to visualize patterns.
 
 Main Features
 -------------
