@@ -43,7 +43,9 @@ Example of library usage and interpretation:
 -------------
 
 **1. The following table is a sample of an output form the function:** broompy.core.table<br>
+  This example is based on a dataset not provided.<br><br>
 
+**Executing:**<br>
 broompy.core.table(dataframe, n_rows, n_round)<br>
 
 <table>
@@ -122,30 +124,34 @@ broompy.core.table(dataframe, n_rows, n_round)<br>
 **Examples of findings:**<br>
 <ul>
   <li>AVG_CLICKS_PER_VISIT approximates a normal distribution and has 6 lower outliers.</li>
-  <li>MEDIAN_MEAL_RATING has 47 nulls which need imputation.</li>
-  <li>Revenue is the only float variable. The rest are integer.</li>
-  <li>TOTAL_PHOTOS_VIEWED has a median of 0 and 120 upper outliers. This means most people dont look view photos.</li>
+  <li>MEDIAN_MEAL_RATING has 47 nulls and requires imputation.</li>
+  <li>REVENUE is the only float variable. The rest are integer.</li>
+  <li>TOTAL_PHOTOS_VIEWED has a median of 0 and 120 upper outliers. This means most people do not view photos.</li>
   <li>CROSS_SELL_SUCCESS has 2 unique values. From the column named sample you can see only ones and zeros. This is a binary or boolean column.</li>
 </ul>
 <br>
 
 **2. usage and interpretation of the function:** broompy.core.normality<br>
+  This example is based on a dataset not provided.<br><br>
 
+**Executing:**<br>
 broompy.core.normality(dataframe, list_var, "y", 10, 30, 10)<br><br>
 <img src="https://raw.githubusercontent.com/juanduranc/imgs/master/normality.png" />
 <br>
 
 **Histograms' interpretation:**<br>
 <ul>
-  <li>MEDIAN_MEAL_RATING has integer  values and it mimics a normal distribution.</li>
+  <li>MEDIAN_MEAL_RATING ranges between 1 and 5, it has integer values and it mimics a normal distribution. The table in example #1 reveals there are only 5 unique values.</li>
   <li>AVG_CLICKS_PER_VISIT is the closest variable to a normal distribution with a p value of 0.03.</li>
-  <li>REVENUE is right skewed with 82 upper outliers.</li>
-  <li>TOTAL_PHOTOS_VIEWED has too many zero values. It is also right skewed and far from being a normal distribution.</li>
+  <li>REVENUE is right skewed with 82 upper outliers. The outlier’s quantity can be seen in the table of example #1.</li>
+  <li>TOTAL_PHOTOS_VIEWED has too many zero values. It is also right skewed and far from being a normal distribution. Example #1 shows a median of 0 for total photos viewed.</li>
 </ul>
 <br>
 
 **3. Scatterplots usage:** broompy.core.scatter<br>
+  This example is based on a dataset not provided.<br><br>
 
+**Executing:**<br>
 broompy.core.scatter(df, explanatory_var, response_var, print_img, size_x, size_y, font_size, green_blue='g')<br><br>
 
 <img src="https://raw.githubusercontent.com/juanduranc/imgs/master/scatter1.png" />
