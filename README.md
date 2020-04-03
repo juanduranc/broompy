@@ -10,7 +10,7 @@ approximation of variable distributions and generates
 scatter plot to visualize patterns.
 
 Main Features
--------------
+--------------
   - Display count of null and available data.
   - Display mean, median and 1.5 IQR outliers count.
   - Identify data type of each variable.
